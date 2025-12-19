@@ -1,2 +1,3 @@
 # microservice-debug-lab
-Interactive lab for learning, debugging and exploring Go+Python microservices with Docker compose
+A hands-on microservices debugging lab using Go and Python (Flask), containerized with Docker Compose.
+Focused on service-to-service communication, logging, and real-world backend debugging scenarios.
