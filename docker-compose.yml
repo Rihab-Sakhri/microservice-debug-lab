@@ -1,0 +1,24 @@
+
+services:
+  user-service-go:
+    build: ./user-service-go
+    container_name: user-service-go
+    ports:
+      - "8080:8080"
+    networks:
+      - microservices-net
+
+  notify-service-python:
+    build: ./notify-service-python
+    container_name: notify-service-python
+    ports:
+      - "5000:5000"
+    networks:
+      - microservices-net
+    depends_on:
+      - user-service-go
+
+networks:
+  microservices-net:
+    driver: bridge
+    
